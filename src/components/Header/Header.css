@@ -1,0 +1,61 @@
+.header {
+  position: fixed;
+  display: flex;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 53px 15px 140px 15px;
+  justify-content: center;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.header__container {
+  display: flex;
+  max-width: 1567px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contact {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  width: min-content;
+}
+
+.header__contact-facebook {
+  background-image: url(../../images/Path.svg);
+  width: 11px;
+  height: 20px;
+}
+
+.header__contact-twitter {
+  background-image: url(../../images/twitter.svg);
+  width: 20px;
+  height: 16px;
+}
+
+.header__logo {
+  width: 123px;
+  height: 26px;
+  background-image: url(../../images/logo-header.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__button {
+  width: 48px;
+  height: 10px;
+  background-color: inherit;
+  border-top: 2px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  border-right: 0px;
+  border-left: 0px;
+  padding: 0px;
+}

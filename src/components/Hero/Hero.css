@@ -1,0 +1,209 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  /* min-height: 2000px; */
+  min-width: 100%;
+  background-image: url(../../images/Background-header.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0px 15px 0px 15px;
+}
+
+.hero__container {
+  margin-top: 219px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1567px;
+  width: 100%;
+}
+
+.hero__article {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 18px 30px;
+  border-radius: 1.5rem;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(28, 46, 61, 0.3);
+  width: max-content;
+  font-family: SFProDisplay;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.hero__title {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 588px;
+  font-family: SFProDisplay;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 84px;
+}
+
+.hero__subtitle {
+  margin-bottom: 0px;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 501px;
+
+  font-family: SFCompactText;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero__button {
+  padding: 33px 80px;
+  background-color: rgba(232, 89, 78, 1);
+  border-radius: 0.5rem;
+  border: 0px;
+  width: max-content;
+  margin-top: 59px;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: background-color 0.5s;
+  font-family: SFProDisplay;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.182px;
+}
+
+.hero__button:active {
+  background-color: rgba(115, 175, 186, 1);
+}
+
+.hero__block {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -7.875rem;
+}
+
+.hero__form {
+  padding: 50px 59px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 4px;
+  border-bottom: 1px solid rgba(11, 16, 20, 0.1);
+  margin-bottom: 0px;
+  margin-top: auto;
+}
+
+.hero__input {
+  width: 100%;
+  border: 0px;
+}
+
+.hero__input:focus {
+  outline: none !important;
+}
+
+.hero__input::placeholder {
+  color: rgba(28, 46, 61, 1);
+  font-family: SFProDisplay;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero__form-button {
+  background-image: url(../../images/search-hero.svg);
+  width: 18px;
+  height: 18px;
+  padding: 0px;
+  border: 0px;
+  background-position: center;
+  background-size: cover;
+  background-color: inherit;
+}
+
+.hero__carousel-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__carousel-controls {
+  display: flex;
+  padding: 53px 50px;
+  background-color: rgba(115, 175, 186, 1);
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid rgba(11, 16, 20, 0.1);
+  height: min-content;
+}
+
+.hero__carousel-controls_next {
+  width: 14px;
+  height: 14px;
+  background-image: url(../../images/next-carousel.svg);
+  padding: 0px;
+  border: 0px;
+  background-position: center;
+  background-size: cover;
+  background-color: inherit;
+}
+
+.hero__carousel-controls_prev {
+  width: 14px;
+  height: 14px;
+  background-image: url(../../images/prev-carousel.svg);
+  padding: 0px;
+  border: 0px;
+  background-position: center;
+  background-size: cover;
+  background-color: inherit;
+}
+
+.hero__carousel-controls_text {
+  color: rgba(255, 255, 255, 1);
+  margin: 0px;
+  text-align: center;
+  font-family: SFProDisplay;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.182px;
+  text-transform: uppercase;
+}
+
+.hero__carousel-media {
+  width: 502px;
+  height: 280px;
+}
+
+.hero__carousel-video {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.hero__carousel {
+  max-width: 502px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.hero__carousel-item_none {
+  display: none;
+}

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: SFProDisplay;
+  src: url(../vendor/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  src: url(../vendor/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: SFCompactText;
+  src: url(../vendor/SFCompactText-Regular.otf);
+}
+
+@font-face {
+  font-family: SFProDisplay;
+  src: url(../vendor/SF-Pro-Display-Medium.otf);
+}
