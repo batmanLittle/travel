@@ -1,11 +1,20 @@
 import "./Hero.css";
+import next from "../../images/next-carousel.svg";
+import prev from "../../images/prev-carousel.svg";
 import posterMoutain from "../../images/poster-moutain.png";
 import posterForest from "../../images/deep-forest.png";
 import posterOcean from "../../images/incredible-ocean.jpg";
 import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import SwiperCore from "swiper";
+import { Autoplay } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
 function Hero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  SwiperCore.use([Autoplay]);
+  const [mySwiper, setMySwiper] = useState({});
 
   const slides = [
     {
@@ -28,26 +37,26 @@ function Hero() {
     },
   ];
 
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
+  // const goToPrevious = () => {
+  //   const isFirstSlide = currentIndex === 0;
+  //   const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+  //   setCurrentIndex(newIndex);
+  // };
 
-  const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  // const goToNext = () => {
+  //   const isLastSlide = currentIndex === slides.length - 1;
+  //   const newIndex = isLastSlide ? 0 : currentIndex + 1;
+  //   setCurrentIndex(newIndex);
+  // };
 
-  // Функция для автоматического обновления слайдера
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((currentIndex) => (currentIndex + 1) % slides.length);
-    }, 5000);
+  // // Функция для автоматического обновления слайдера
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((currentIndex) => (currentIndex + 1) % slides.length);
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section className="hero">
@@ -67,39 +76,62 @@ function Hero() {
             <input className="hero__input" placeholder="Search stories"></input>
             <button className="hero__form-button"></button>
           </form>
-          <ul className="hero__carousel">
-            {slides.map((slide, index) => (
-              <li
-                key={slide.id}
-                className={
-                  index === currentIndex
-                    ? "hero__carousel-item"
-                    : "hero__carousel-item_none"
+          <div className="hero__block-slider">
+            <Swiper
+              slidesPerView={1}
+              // navigation={true}
+              modules={[Navigation]}
+              onInit={setMySwiper}
+              className="hero__carousel"
+              speed={900}
+              autoplay={{
+                delay: 2000, // время в миллисекундах
+                disableOnInteraction: false,
+              }}
+            >
+              {slides.map((slide) => (
+                <SwiperSlide key={slide.id} className={"hero__carousel-item"}>
+                  <div className="hero__carousel-media">
+                    <video
+                      type="video/mp4"
+                      controls
+                      poster={slide.poster}
+                      className="hero__carousel-video"
+                      src={slide.src}
+                    ></video>
+                  </div>
+                  <div className="hero__carousel-controls">
+                    <p className="hero__carousel-controls_text">{slide.text}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button
+              className="hero__carousel-controls_prev"
+              onClick={() => {
+                if (mySwiper.activeIndex === 0) {
+                  mySwiper.slideToLoop(2);
+                } else {
+                  mySwiper.slidePrev();
                 }
-              >
-                <div className="hero__carousel-media">
-                  <video
-                    type="video/mp4"
-                    controls
-                    poster={slide.poster}
-                    className="hero__carousel-video"
-                    src={slide.src}
-                  ></video>
-                </div>
-                <div className="hero__carousel-controls">
-                  <button
-                    className="hero__carousel-controls_prev"
-                    onClick={goToPrevious}
-                  ></button>
-                  <p className="hero__carousel-controls_text">{slide.text}</p>
-                  <button
-                    className="hero__carousel-controls_next"
-                    onClick={goToNext}
-                  ></button>
-                </div>
-              </li>
-            ))}
-          </ul>
+              }}
+            >
+              <img src={prev} alt="стрелка" />
+            </button>
+            <button
+              className="hero__carousel-controls_next"
+              onClick={() => {
+                // console.log("ghghghgh");
+                if (mySwiper.activeIndex === slides.length - 1) {
+                  mySwiper.slideToLoop(0);
+                } else {
+                  mySwiper.slideNext();
+                }
+              }}
+            >
+              <img src={next} alt="стрелка" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
