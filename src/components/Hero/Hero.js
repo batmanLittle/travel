@@ -1,10 +1,10 @@
 import "./Hero.css";
-import next from "../../images/next-carousel.svg";
-import prev from "../../images/prev-carousel.svg";
+// import next from "../../images/next-carousel.svg";
+// import prev from "../../images/prev-carousel.svg";
 import posterMoutain from "../../images/poster-moutain.png";
 import posterForest from "../../images/deep-forest.png";
 import posterOcean from "../../images/incredible-ocean.jpg";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import SwiperCore from "swiper";
@@ -14,7 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 function Hero() {
   SwiperCore.use([Autoplay]);
-  const [mySwiper, setMySwiper] = useState({});
+  const [mySwiper, setMySwiper] = useState(null);
 
   const slides = [
     {
@@ -78,6 +78,7 @@ function Hero() {
           </form>
           <div className="hero__block-slider">
             <Swiper
+              // oplayPause={videoClickHandler}
               slidesPerView={1}
               // navigation={true}
               modules={[Navigation]}
@@ -86,7 +87,7 @@ function Hero() {
               speed={900}
               autoplay={{
                 delay: 2000, // время в миллисекундах
-                disableOnInteraction: false,
+                disableOnInteraction: true,
               }}
             >
               {slides.map((slide) => (
@@ -98,6 +99,8 @@ function Hero() {
                       poster={slide.poster}
                       className="hero__carousel-video"
                       src={slide.src}
+                      onPlay={() => mySwiper.autoplay.stop()}
+                      onPause={() => mySwiper.autoplay.start()}
                     ></video>
                   </div>
                   <div className="hero__carousel-controls">
@@ -106,31 +109,33 @@ function Hero() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <button
-              className="hero__carousel-controls_prev"
-              onClick={() => {
-                if (mySwiper.activeIndex === 0) {
-                  mySwiper.slideToLoop(2);
-                } else {
-                  mySwiper.slidePrev();
-                }
-              }}
-            >
-              <img src={prev} alt="стрелка" />
-            </button>
-            <button
-              className="hero__carousel-controls_next"
-              onClick={() => {
-                // console.log("ghghghgh");
-                if (mySwiper.activeIndex === slides.length - 1) {
-                  mySwiper.slideToLoop(0);
-                } else {
-                  mySwiper.slideNext();
-                }
-              }}
-            >
-              <img src={next} alt="стрелка" />
-            </button>
+            <div className="hero__carousel-controls_button">
+              <button
+                className="hero__carousel-controls_prev"
+                onClick={() => {
+                  if (mySwiper.activeIndex === 0) {
+                    mySwiper.slideToLoop(2);
+                  } else {
+                    mySwiper.slidePrev();
+                  }
+                }}
+              >
+                {/* <img src={prev} alt="стрелка" /> */}
+              </button>
+              <button
+                className="hero__carousel-controls_next"
+                onClick={() => {
+                  // console.log("ghghghgh");
+                  if (mySwiper.activeIndex === slides.length - 1) {
+                    mySwiper.slideToLoop(0);
+                  } else {
+                    mySwiper.slideNext();
+                  }
+                }}
+              >
+                {/* <img src={next} alt="стрелка" /> */}
+              </button>
+            </div>
           </div>
         </div>
       </div>
