@@ -40,6 +40,7 @@
 .travel__container-card {
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .travel__card-image {
@@ -51,11 +52,14 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(115, 175, 186, 0.5);
+  top: 0;
+  left: 0;
+  background-color: rgba(115, 175, 186, 0.8);
   border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
 }
+
 .travel__card-text {
   position: absolute;
   bottom: 61px;
@@ -67,5 +71,40 @@
   line-height: 31px;
   color: rgba(255, 255, 255, 1);
   max-width: 228px;
-  margin: 0px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(9.375rem);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.travel__container-card:hover .travel__card-opacity,
+.travel__container-card:focus .travel__card-opacity {
+  opacity: 1;
+}
+
+.travel__container-card:hover .travel__card-text,
+.travel__container-card:focus .travel__card-text
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 600px) {
+  .travel {
+    margin-top: 100px;
+    
+  }
+  
+  .travel__container {
+  align-items: center;
+  }
+  
+  .travel__container-title {
+text-align: center;
+    font-size: 54px;
+    
+    line-height: 64px; 
+   
+  }
+  
 }

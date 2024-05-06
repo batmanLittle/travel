@@ -13,28 +13,28 @@ function Travel() {
         </h2>
         <ul className="travel__container-cards">
           <li className="travel__container-card">
-            <a href="#">
+            <a href="#" tabIndex="0">
               <img className="travel__card-image" src={mountains} alt="горы" />
               <div className="travel__card-opacity"></div>
               <p className="travel__card-text">Vacation Home Rental Success</p>
             </a>
           </li>
           <li className="travel__container-card">
-            <a href="#">
+            <a href="#" tabIndex="0">
               <img className="travel__card-image" src={river} alt="река" />
               <div className="travel__card-opacity"></div>
               <p className="travel__card-text">Vacation Home Rental Success</p>
             </a>
           </li>
           <li className="travel__container-card">
-            <a href="#">
+            <a href="#" tabIndex="0">
               <img className="travel__card-image" src={castle} alt="замок" />
               <div className="travel__card-opacity"></div>
               <p className="travel__card-text">Vacation Home Rental Success</p>
             </a>
           </li>
           <li className="travel__container-card">
-            <a href="#">
+            <a href="#" tabIndex="0">
               <img className="travel__card-image" src={tower} alt="горы" />
               <div className="travel__card-opacity"></div>
               <p className="travel__card-text">Vacation Home Rental Success</p>

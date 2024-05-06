@@ -81,7 +81,8 @@
   letter-spacing: 2.182px;
 }
 
-.hero__button:active {
+.hero__button:active,
+.hero__button:hover{
   background-color: rgba(115, 175, 186, 1);
 }
 
@@ -192,6 +193,7 @@
   letter-spacing: 2.182px;
   text-transform: uppercase;
   z-index: 1;
+  transition: transform .25s,-webkit-transform .25s;
 }
 
 .hero__carousel-media {
