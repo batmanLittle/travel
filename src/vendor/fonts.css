@@ -17,3 +17,13 @@
   font-family: SFProDisplay;
   src: url(../vendor/SF-Pro-Display-Medium.otf);
 }
+
+@font-face {
+  font-family: Playfair Display;
+  src: url(../vendor/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../vendor/HelveticaNeueBold.otf);
+}

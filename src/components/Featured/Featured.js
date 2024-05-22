@@ -6,7 +6,7 @@ import avatar4 from "../../images/Avatar (3).png";
 
 function Featured() {
   return (
-    <section className="featured">
+    <section className="featured" id="featured">
       <div className="featured__container">
         <div className="featured__block">
           <span className="featured__article">FEATURED</span>
@@ -28,36 +28,36 @@ function Featured() {
           <li className="featured__stories-item">
             <img className="featured__stories-img" src={avatar1} alt="avatar" />
             <div className="featured__stories-text">
-              <h4 className="featured__stories-title">
+              <p className="featured__stories-title">
                 Do A Sporting Stag Do In Birmingham
-              </h4>
+              </p>
               <p className="featured__stories-subtitle">13 Dec 2019</p>
             </div>
           </li>
           <li className="featured__stories-item">
             <img className="featured__stories-img" src={avatar2} alt="avatar" />
             <div className="featured__stories-text">
-              <h4 className="featured__stories-title">
+              <p className="featured__stories-title">
                 From Wetlands To Canals And Dams Amsterdam Is Alive
-              </h4>
+              </p>
               <p className="featured__stories-subtitle">13 Dec 2019</p>
             </div>
           </li>
           <li className="featured__stories-item">
             <img className="featured__stories-img" src={avatar3} alt="avatar" />
             <div className="featured__stories-text">
-              <h4 className="featured__stories-title">
+              <p className="featured__stories-title">
                 Stu Unger Rise And Fall Of A Poker Genius
-              </h4>
+              </p>
               <p className="featured__stories-subtitle">13 Dec 2019</p>
             </div>
           </li>
           <li className="featured__stories-item">
             <img className="featured__stories-img" src={avatar4} alt="avatar" />
             <div className="featured__stories-text">
-              <h4 className="featured__stories-title">
+              <p className="featured__stories-title">
                 New Ideas For A Low Cost Vacation On Water
-              </h4>
+              </p>
               <p className="featured__stories-subtitle">13 Dec 2019</p>
             </div>
           </li>

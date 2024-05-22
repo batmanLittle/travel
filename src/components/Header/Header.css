@@ -1,13 +1,11 @@
 .header {
   position: fixed;
   display: flex;
-  top: 0px;
-  right: 0px;
-  left: 0px;
   width: 100%;
   padding: 53px 15px 140px 15px;
   justify-content: center;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  z-index: 6;
 }
 
 .hidden {
@@ -20,6 +18,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  z-index: 6;
 }
 
 .header__contact {
@@ -27,18 +26,21 @@
   gap: 40px;
   align-items: center;
   width: min-content;
+  z-index: 6;
 }
 
 .header__contact-facebook {
   background-image: url(../../images/Path.svg);
   width: 11px;
   height: 20px;
+  z-index: 6;
 }
 
 .header__contact-twitter {
   background-image: url(../../images/twitter.svg);
   width: 20px;
   height: 16px;
+  z-index: 6;
 }
 
 .header__logo {
@@ -47,15 +49,62 @@
   background-image: url(../../images/logo-header.svg);
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 6;
 }
 
 .header__button {
   width: 48px;
-  height: 10px;
+  height: 15px;
   background-color: inherit;
-  border-top: 2px solid rgba(255, 255, 255, 1);
-  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  border: 0px;
   border-right: 0px;
   border-left: 0px;
   padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.line {
+  width: 48px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 6;
+}
+
+.header__button.opened #line1 {
+  transform: rotate(45deg) translate(4px, 5px);
+  z-index: 6;
+}
+
+.header__button.opened #line2 {
+  transform: rotate(-45deg) translate(5px, -4px);
+  z-index: 6;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 40px 15px 140px 15px;
+  }
+
+  .header__contact {
+    gap: 20px;
+  }
+
+  .header__logo {
+    width: 120px;
+  }
+
+  .header__button {
+    width: 42px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header {
+    max-width: 320px;
+  }
 }

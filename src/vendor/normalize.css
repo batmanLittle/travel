@@ -41,11 +41,6 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
      ========================================================================== */
 
@@ -352,4 +347,120 @@ template {
 
 [hidden] {
   display: none;
+}
+
+h1 {
+  font-family: SFProDisplay;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 84px;
+  margin: 0px;
+}
+
+h2 {
+  font-family: SFProDisplay;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px; /* 125% */
+  margin: 0px;
+}
+
+h3 {
+  font-family: SFProDisplay;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0px;
+}
+
+h4 {
+  font-family: SFProDisplay;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  h2 {
+    font-size: 58px;
+    line-height: 70px;
+  }
+  h4 {
+    font-family: SFProDisplay;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 60px;
+    line-height: 62px;
+  }
+  h2 {
+    font-size: 54px;
+    line-height: 66px;
+  }
+  h3 {
+    font-size: 46px;
+    line-height: 54px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 56px;
+    text-align: center;
+    line-height: 58px;
+  }
+  h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  h3 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  h3 {
+    font-size: 35px;
+    line-height: 43px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  h4 {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

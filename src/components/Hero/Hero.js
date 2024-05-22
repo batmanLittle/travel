@@ -1,6 +1,4 @@
 import "./Hero.css";
-// import next from "../../images/next-carousel.svg";
-// import prev from "../../images/prev-carousel.svg";
 import posterMoutain from "../../images/poster-moutain.png";
 import posterForest from "../../images/deep-forest.png";
 import posterOcean from "../../images/incredible-ocean.jpg";
@@ -59,10 +57,10 @@ function Hero() {
   // }, []);
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero__container">
         <span className="hero__article">New book</span>
-        <h3 className="hero__title">Mother Earth Hosts Our Travels</h3>
+        <h1 className="hero__title">Mother Earth Hosts Our Travels</h1>
         <p className="hero__subtitle">
           There are not many cities that have experienced such social and
           political extremes in recent history as Amsterdam. In the 20th century
@@ -78,9 +76,7 @@ function Hero() {
           </form>
           <div className="hero__block-slider">
             <Swiper
-              // oplayPause={videoClickHandler}
               slidesPerView={1}
-              // navigation={true}
               modules={[Navigation]}
               onInit={setMySwiper}
               className="hero__carousel"
@@ -119,9 +115,7 @@ function Hero() {
                     mySwiper.slidePrev();
                   }
                 }}
-              >
-                {/* <img src={prev} alt="стрелка" /> */}
-              </button>
+              ></button>
               <button
                 className="hero__carousel-controls_next"
                 onClick={() => {
@@ -132,9 +126,7 @@ function Hero() {
                     mySwiper.slideNext();
                   }
                 }}
-              >
-                {/* <img src={next} alt="стрелка" /> */}
-              </button>
+              ></button>
             </div>
           </div>
         </div>
