@@ -30,14 +30,12 @@
 }
 
 .header__contact-facebook {
-  background-image: url(../../images/Path.svg);
   width: 11px;
   height: 20px;
   z-index: 6;
 }
 
 .header__contact-twitter {
-  background-image: url(../../images/twitter.svg);
   width: 20px;
   height: 16px;
   z-index: 6;

@@ -1,6 +1,8 @@
 import "./Header.css";
 import React, { useState, useEffect } from "react";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
+import facebook from "../../images/Path.svg";
+import twitter from "../../images/twitter.svg";
 
 function Header() {
   const [scrollY, setScrollY] = useState(false);
@@ -33,8 +35,12 @@ function Header() {
         <header className="header">
           <div className="header__container">
             <div className="header__contact">
-              <a className="header__contact-facebook" href="#"></a>
-              <a className="header__contact-twitter" href="#"></a>
+              <div className="header__contact-facebook">
+                <img src={facebook} alt="icon-facebook" />
+              </div>
+              <div className="header__contact-twitter">
+                <img src={twitter} alt="icon-twitter" />
+              </div>
             </div>
             <div className="header__logo"></div>
             <button
@@ -51,8 +57,12 @@ function Header() {
         <header className={`${scrollY ? "header hidden" : "header"}`}>
           <div className="header__container">
             <div className="header__contact">
-              <a className="header__contact-facebook" href="#"></a>
-              <a className="header__contact-twitter" href="#"></a>
+              <div className="header__contact-facebook">
+                <img src={facebook} alt="icon-facebook" />
+              </div>
+              <div className="header__contact-twitter">
+                <img src={twitter} alt="icon-twitter" />
+              </div>
             </div>
             <div className="header__logo"></div>
             <button

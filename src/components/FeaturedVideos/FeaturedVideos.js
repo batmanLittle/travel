@@ -98,14 +98,14 @@ function FeaturedVideos() {
             <SwiperSlide
               key={slide.id}
               className={
-                activeSlide == slide.activeSlide
+                activeSlide === slide.activeSlide
                   ? "featured-videos__slider ff"
                   : "featured-videos__slider"
               }
             >
               <button
                 className={
-                  activeSlide == slide.activeSlide
+                  activeSlide === slide.activeSlide
                     ? "featured-videos__slider-button"
                     : "featured-videos__slider-button featured-videos__opacity"
                 }
@@ -113,12 +113,12 @@ function FeaturedVideos() {
               <img
                 className="featured-videos__slider-img"
                 src={slide.src}
-                alt="photo"
+                alt="ocean"
               />
 
               <h4
                 className={
-                  activeSlide == slide.activeSlide
+                  activeSlide === slide.activeSlide
                     ? "featured-videos__slider-text"
                     : "featured-videos__slider-text featured-videos__opacity"
                 }

@@ -1,4 +1,5 @@
 import "./Footer.css";
+// import user from "../../images/user.svg";
 
 function Footer() {
   return (
@@ -9,32 +10,32 @@ function Footer() {
           <div className="footer__nav-green"></div>
           <ul className="footer__nav-list">
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 About
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Press
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Blog
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Careers
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Security
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Driver Centre
               </a>
             </li>
@@ -45,32 +46,32 @@ function Footer() {
           <div className="footer__nav-green"></div>
           <ul className="footer__nav-list">
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Our Story
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Recipes
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Nutrition
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Resources
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Newsletter
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Contact
               </a>
             </li>
@@ -81,32 +82,32 @@ function Footer() {
           <div className="footer__nav-green"></div>
           <ul className="footer__nav-list">
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Customer service
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Recommend a restaurant
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Signup a restaurant
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Jobs
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Press
               </a>
             </li>
             <li className="footer__nav-item">
-              <a className="footer__nav-link" href="#">
+              <a className="footer__nav-link" href="/">
                 Terms of use
               </a>
             </li>
